@@ -1,0 +1,37 @@
+syntax = "proto3";
+package protoModel;
+
+message ProductBundleDetail{
+    int64 id = 1;
+	string name = 2;
+    string description = 3;
+    double listPrice = 4;
+    double cost = 5;
+}
+
+message Product{
+    int64 id = 1;
+	string name = 2;
+    string description = 3;
+    double listPrice = 4;
+    double cost = 5;
+    double volume = 6;
+    double weight = 7;
+    int64 categoryId = 8;
+    string category = 9;
+    string categoryCode = 10;
+    int64 uomSalesId = 11;
+    string uomSales = 12;
+    int64 uomPurchaseId = 13;
+    string uomPurchase = 14;
+    string sku = 15;
+    int64 brandId = 16;
+    string brand = 17;
+    bool isBundle = 18;
+    int64 createDate = 19;
+    repeated ProductBundleDetail productBundleDetail = 20;
+}
+
+message AllProduct{
+    repeated Product product = 1;
+}
